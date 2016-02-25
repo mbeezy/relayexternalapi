@@ -25,5 +25,12 @@ Configure External Resource - WebAPI in this example
         </behavior>
       </endpointBehaviors>
     </behaviors>
+     <extensions>
+      <!-- In this extension section we are introducing all known service bus extensions. User can remove the ones they don't need. -->
+      <behaviorExtensions>
+        <add name="netTcpRelayBinding"
+          type="Microsoft.ServiceBus.Configuration.NetTcpRelayBindingCollectionElement, Microsoft.ServiceBus, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      </bindingExtensions>
+    </extensions>
   </system.serviceModel>
 ```
