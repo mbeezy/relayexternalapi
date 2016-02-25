@@ -12,7 +12,7 @@ Configure External Resource - WebAPI in this example
     <client>
       <!-- For local -->
       <!--<endpoint name="SanDiegoSurfSpot" address="http://localhost/relayinternal/SanDiegoSpots.svc" binding="basicHttpBinding" contract="SurfSpots.Contracts.ISanDiegoSpots" />-->
-      <endpoint name="SanDiegoSurfSpot_SB" address="sb://relaytester.servicebus.windows.net/surfspot" contract="SurfSpots.Contracts.ISanDiegoSpots" behaviorConfiguration="sbTokenProvider" />
+      <endpoint name="SanDiegoSurfSpot_SB" binding="netTcpRelayBinding" address="sb://relaytester.servicebus.windows.net/surfspot" contract="SurfSpots.Contracts.ISanDiegoSpots" behaviorConfiguration="sbTokenProvider" />
     </client>
     <behaviors>
       <endpointBehaviors>
